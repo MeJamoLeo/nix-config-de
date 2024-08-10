@@ -90,6 +90,7 @@
 
     neovim
     zed-editor
+    lazygit
     gnome.gnome-tweaks
   ];
 
