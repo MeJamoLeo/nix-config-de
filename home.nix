@@ -90,6 +90,7 @@
 
     neovim
     zed-editor
+    gnome.gnome-tweaks
   ];
 
   # basic configuration of git, please change to your own
