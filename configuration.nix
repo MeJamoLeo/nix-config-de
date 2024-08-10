@@ -99,6 +99,7 @@
 
   # Install firefox.
   programs.firefox.enable = true;
+  programs.starship.enable = true;
 
 
 # Enable the Flakes feature and the accompanying new nix command-line tool
