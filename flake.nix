@@ -11,6 +11,11 @@
         # TODO: I have thinkpad, so I will use it after I devide module base on host and/or architecture.
 
         xremap-flake.url = "github:xremap/nix-flake";
+
+	nixvim = {
+		url = "github:nix-community/nixvim";
+		inputs.nixpkgs.follows = "nixpkgs";
+	};
     };
 
 
