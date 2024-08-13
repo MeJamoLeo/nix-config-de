@@ -6,8 +6,8 @@
   home.homeDirectory = "/home/treo";
 
   imports = [
-	   # ./nixvim.nix
 	   ./modules/qutebrowser.nix
+	   ./nixvim.nix
     ];
 
   # Packages that should be installed to the user profile.
@@ -78,7 +78,7 @@
     pciutils # lspci
     usbutils # lsusb
 
-    neovim
+    # neovim
     zed-editor
     lazygit
     gnome.gnome-tweaks
