@@ -1,4 +1,4 @@
-{ pkgs, inputs, ... }:
+{ pkgs, ... }:
 
 {
   # TODO please change the username & home directory to your own
@@ -7,7 +7,7 @@
 
   imports = [
 	   ./modules/qutebrowser.nix
-	   ./nixvim.nix
+	   ./modules/nixvim.nix
     ];
 
   # Packages that should be installed to the user profile.
