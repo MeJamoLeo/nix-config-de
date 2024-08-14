@@ -31,11 +31,11 @@
 		...
 	}@inputs: {
 		nixosConfigurations = {
-			"treo-de" = nixpkgs.lib.nixosSystem {
+			"suika" = nixpkgs.lib.nixosSystem {
 				system = "x86_64-linux";
 				modules = [
 					# ./configuration.nix
-					./hosts/treo-de
+					./hosts/suika
 
 					home-manager.nixosModules.home-manager
 
