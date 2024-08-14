@@ -24,11 +24,46 @@
 				key = "<esc><esc>";
 				action = ":set nohlsearch<CR>";
 			}
+
 			{
 				mode = "n";
 				key = "<leader>lg";
 				action = "<CMD>LazyGit<CR>";
 				options.desc = "[L]azy[G]it";
+			}
+
+#==============================
+# smart-splits
+#==============================
+			{
+				mode = "n";
+				key = "<C-e> ";
+				action = "<CMD>SmartResizeMode<CR>";
+				options.desc = "Resize Mode";
+			}
+			{
+				mode = "n";
+				key = "<C-e>h";
+				action = "<CMD>SmartSwapLeft<CR>";
+				options.desc = "Swap Left";
+			}
+			{
+				mode = "n";
+				key = "<C-e>j";
+				action = "<CMD>SmartSwapDown<CR>";
+				options.desc = "Swap Down";
+			}
+			{
+				mode = "n";
+				key = "<C-e>k";
+				action = "<CMD>SmartSwapUp<CR>";
+				options.desc = "Swap Up";
+			}
+			{
+				mode = "n";
+				key = "<C-e>l";
+				action = "<CMD>SmartSwapRight<CR>";
+				options.desc = "Swap Right";
 			}
 		];
 
