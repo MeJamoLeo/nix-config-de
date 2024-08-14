@@ -34,7 +34,8 @@
 			"treo-de" = nixpkgs.lib.nixosSystem {
 				system = "x86_64-linux";
 				modules = [
-					./configuration.nix
+					# ./configuration.nix
+					./hosts/treo-de
 
 					home-manager.nixosModules.home-manager
 
