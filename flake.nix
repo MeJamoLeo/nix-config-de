@@ -43,8 +43,8 @@
 						home-manager = {
 							useGlobalPkgs = true;
 							useUserPackages = true;
-							users.treo = import ./home.nix;
 							extraSpecialArgs.inputs = inputs;
+							users.treo = import ./home;
 						};
 					}
 
