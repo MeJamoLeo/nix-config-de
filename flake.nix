@@ -7,8 +7,8 @@
 		home-manager.url = "github:nix-community/home-manager";
 		home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
-		# inputs.nixos-hardware.url = "github:NixOS/nixos-hardware/master";
-		# TODO: I have thinkpad, so I will use it after I devide module base on host and/or architecture.
+# inputs.nixos-hardware.url = "github:NixOS/nixos-hardware/master";
+# TODO: I have thinkpad, so I will use it after I devide module base on host and/or architecture.
 
 		xremap-flake.url = "github:xremap/nix-flake";
 
