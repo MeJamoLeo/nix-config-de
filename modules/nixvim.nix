@@ -164,6 +164,11 @@
 			rainbow-delimiters = { enable = true; };
 			which-key = { enable = true; };
 			smart-splits = { enable = true; };
+			gitgutter = {
+				enable = true;
+				highlightLineNumbers = true;
+				highlightLines = true;
+			};
 
 			telescope = {
 				enable = true;
