@@ -17,12 +17,17 @@
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
 
+		nixos-cosmic = {
+			url = "github:lilyinstarlight/nixos-cosmic";
+			inputs.nixpkgs.follows = "nixpkgs";
+		};
 	};
 
 	outputs = {
 		nixpkgs,
 		home-manager,
 		nixvim,
+		nixos-cosmic,
 		...
 	}@inputs: {
 		nixosConfigurations = {
@@ -31,16 +36,25 @@
 				modules = [
 					./configuration.nix
 
-						home-manager.nixosModules.home-manager
+					home-manager.nixosModules.home-manager
 
-						{
-							home-manager = {
-								useGlobalPkgs = true;
-								useUserPackages = true;
-								users.treo = import ./home.nix;
-								extraSpecialArgs.inputs = inputs;
-							};
-						}
+					{
+						home-manager = {
+							useGlobalPkgs = true;
+							useUserPackages = true;
+							users.treo = import ./home.nix;
+							extraSpecialArgs.inputs = inputs;
+						};
+					}
+
+					# COSMIC
+					{
+						nix.settings = {
+							substituters = [ "https://cosmic.cachix.org/" ];
+							trusted-public-keys = [ "cosmic.cachix.org-1:Dya9IyXD4xdBehWjrkPv6rtxpmMdRel02smYzA85dPE=" ];
+						};
+					}
+					nixos-cosmic.nixosModules.default
 				];
 			};
 		};
