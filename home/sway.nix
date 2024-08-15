@@ -9,12 +9,20 @@ in
 	];
 	wayland.windowManager.sway = {
 		enable = true;
+		extraConfig = ''
+			set $opacity 0.8
+			for_window [class=".*"] opacity 0.95
+			for_window [app_id=".*"] opacity 0.95
+		'';
 		config = {
 			modifier = mod;
 			input = {
 				"type:keyboard" = {
 					xkb_options = "ctrl:swapcaps";
 				};
+			};
+			output = {
+				"*".bg = "./wallpaper fill";
 			};
 			bars = [ { position = "top"; } ];
 			window.titlebar = false;
@@ -93,7 +101,5 @@ in
 				"Escape" = ''mode "default"'';
 			};
 		};
-		extraSessionCommands = ''
-		'';
 	};
 }
