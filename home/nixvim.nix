@@ -77,7 +77,7 @@
 			softtabstop = 0;
 			showtabline = 2;
 			autoindent = true;
-			smartindent = true;
+			# smartindent = true;
 			termguicolors = true;
 			list = true;
 			listchars = {
@@ -97,10 +97,21 @@
 			};
 		};
 
-		colorschemes.nightfox = {
-			enable = true;
-			flavor = "carbonfox";
-			settings.options.transparent = true;
+		colorschemes = {
+			poimandres = {
+				enable = false;
+			};
+			vscode = {
+				enable = false;
+			};
+			nightfox = {
+				enable = false;
+				flavor = "carbonfox";
+				settings.options.transparent = true;
+			};
+			everforest = {
+				enable = true;
+			};
 		};
 
 		plugins = {
@@ -177,32 +188,39 @@
 					ui-select.enable = true;
 				};
 				keymaps = {
-					"<leader>sf" = {
+					"<leader>ff" = {
 						mode = "n";
 						action = "find_files";
 						options = {
-							desc = "[S]earch [F]iles";
+							desc = "[F]ind [F]iles";
 						};
 					};
-					"<leader>sg" = {
+					"<leader>fg" = {
 						mode = "n";
 						action = "git_files";
 						options = {
-							desc = "[S]earch [G]it files";
+							desc = "[F]ind [G]it files";
 						};
 					};
-					"<leader>sw" = {
+					"<leader>fw" = {
 						mode = "n";
 						action = "grep_string";
 						options = {
-							desc = "[S]earch current [W]ord";
+							desc = "[F]ind current [W]ord";
 						};
 					};
-					"<leader>ss" = {
+					"<leader>fb" = {
 						mode = "n";
 						action = "builtin";
 						options = {
-							desc = "[S]earch [S]elect Telescope";
+							desc = "[F]ind [B]uiltin";
+						};
+					};
+					"<leader>fc" = {
+						mode = "n";
+						action = "colorscheme";
+						options = {
+							desc = "[F]ind [C]olorscheme";
 						};
 					};
 				};
