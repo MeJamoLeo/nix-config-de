@@ -21,6 +21,14 @@
 			url = "github:lilyinstarlight/nixos-cosmic";
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
+
+		hyprland = {
+			url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
+		};
+		hyprland-plugins = {
+			url = "github:hyprwm/hyprland-plugins";
+			inputs.hyprland.follows = "hyprland";
+		};
 	};
 
 	outputs = {
@@ -28,17 +36,17 @@
 		home-manager,
 		nixvim,
 		nixos-cosmic,
+		hyprland,
 		...
 	}@inputs: {
 		nixosConfigurations = {
+
 			"suika" = nixpkgs.lib.nixosSystem {
 				system = "x86_64-linux";
 				modules = [
-					# ./configuration.nix
 					./hosts/suika
-
+#___________________Home_Manager
 					home-manager.nixosModules.home-manager
-
 					{
 						home-manager = {
 							useGlobalPkgs = true;
@@ -47,8 +55,7 @@
 							users.treo = import ./home;
 						};
 					}
-
-					# COSMIC
+#___________________COSMIC
 					{
 						nix.settings = {
 							substituters = [ "https://cosmic.cachix.org/" ];

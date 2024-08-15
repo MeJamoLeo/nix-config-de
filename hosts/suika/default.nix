@@ -49,8 +49,13 @@
 # Enable the GNOME Desktop Environment.
 	services.xserver.displayManager.gdm.enable = true;
 	services.xserver.desktopManager.gnome.enable = true;
-	# services.desktopManager.cosmic.enable = true;
+	services.desktopManager.cosmic.enable = true;
 	# services.displayManager.cosmic-greeter.enable = true;
+	programs.hyprland.enable = true;
+	programs.sway = {
+		enable = true;
+		# wrapperFeatures.gtk = true;
+	};
 
 # Configure keymap in X11
 	services.xserver = {
@@ -89,9 +94,6 @@
 			"ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAsZQ5UilzRtWwtoN4t5aIksHQwkqK8T3dMVY4F+0M2c treo@nixos"
 		];
 		packages = with pkgs; [
-#  thunderbird
-
-			qutebrowser
 		];
 	};
 

@@ -7,8 +7,10 @@
 
 	imports = [
 		./home.nix
+		./hyprland.nix
 		./qutebrowser.nix
 		./nixvim.nix
+		./sway.nix
 	];
 
 # Packages that should be installed to the user profile.
@@ -82,7 +84,12 @@
 # neovim
 			zed-editor
 			lazygit
-			gnome.gnome-tweaks
+			gnome-tweaks
+
+# sway
+			grim
+			slurp
+			wl-clipboard
 			];
 
 
