@@ -22,7 +22,7 @@ in
 				};
 			};
 			output = {
-				"*".bg = "./wallpaper fill";
+				"*".bg = "../wallpaper/river-and-mountains.jpg fill";
 			};
 			bars = [ { position = "top"; } ];
 			window.titlebar = false;
