@@ -54,6 +54,7 @@
 							extraSpecialArgs.inputs = inputs;
 							users.treo = import ./home;
 						};
+						nixpkgs.config.allowUnfree = true;
 					}
 #___________________COSMIC
 					{

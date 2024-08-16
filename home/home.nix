@@ -35,6 +35,7 @@
 
 	programs.kitty = {
 		enable = true;
+		theme = "Everforest Dark Medium";
 	};
 
 	programs.tmux = {

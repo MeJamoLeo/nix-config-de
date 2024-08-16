@@ -90,6 +90,8 @@
 			grim
 			slurp
 			wl-clipboard
+			vscode
+			discord
 			];
 
 
