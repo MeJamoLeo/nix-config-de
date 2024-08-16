@@ -92,6 +92,8 @@
 			wl-clipboard
 			vscode
 			discord
+			online-judge-tools
+			online-judge-template-generator
 			];
 
 
