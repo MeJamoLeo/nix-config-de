@@ -65,6 +65,7 @@
 					}
 					nixos-cosmic.nixosModules.default
 				];
+				specialArgs = {inherit inputs;};
 			};
 		};
 	};
