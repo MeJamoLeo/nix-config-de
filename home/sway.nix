@@ -1,3 +1,4 @@
+{ config, ... }:
 let
 
 mod = "Mod4";
@@ -5,15 +6,15 @@ mod = "Mod4";
 in
 {
 	imports = [
-		# ./eww
+# ./eww
 	];
 	wayland.windowManager.sway = {
 		enable = true;
 		extraConfig = ''
-			set $opacity 0.8
-			for_window [class=".*"] opacity 0.95
-			for_window [app_id=".*"] opacity 0.95
-		'';
+			set $opacity 0.5
+			for_window [class=".*"] opacity 0.80
+			for_window [app_id=".*"] opacity 0.80
+			'';
 		config = {
 			modifier = mod;
 			input = {
@@ -22,23 +23,26 @@ in
 				};
 			};
 			output = {
-				# "*".bg = "../wallpaper/river-and-mountains.jpg fill";
+				"*" = { bg = "${../wallpaper/lamp.jpg} fill"; };
 			};
 			bars = [ { position = "top"; } ];
 			window.titlebar = false;
 
 			gaps.inner = 10;
-
 			keybindings = {
 				"${mod}+Tab" = "workspace next";
 				"${mod}+Shift+Tab" = "workspace prev";
 
-				"${mod}+r" = "mode resize";
-				"${mod}+t" = "exec --no-startup-id kitty";
 				"${mod}+b" = "exec --no-startup-id qutebrowser";
-				"${mod}+q" = "reload";
+				"${mod}+d" = "exec --no-startup-id discord";
+				"${mod}+z" = "exec --no-startup-id zathura";
+				"${mod}+r" = "mode resize";
+				"${mod}+Shift+r" = "reload";
+				"${mod}+t" = "exec --no-startup-id kitty";
+				"${mod}+f" = "exec --no-startup-id firefox";
+				"${mod}+q" = "kill";
 				"${mod}+Escape" = "exec swaylock";
-				"${mod}+Shift+Escape" = "exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'";
+				"${mod}+Shift+Escape" = "swaymsg exit";
 				"${mod}+1" = "workspace number 1";
 				"${mod}+2" = "workspace number 2";
 				"${mod}+3" = "workspace number 3";
@@ -88,7 +92,7 @@ in
 # "XF86AudioPrev" = "exec playerctl previous";
 # "XF86Search" = "exec bemenu-run";
 
-				"${mod}+space" = "layout toggle splith stacking";
+# "${mod}+space" = "layout toggle splith stacking";
 				"${mod}+a" = "focus parent";
 			};
 			modes.resize = {
