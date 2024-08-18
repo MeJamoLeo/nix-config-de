@@ -8,7 +8,7 @@
 	imports =
 		[ # Include the results of the hardware scan.
 			./hardware-configuration.nix
-			# ./keymap.nix
+			# ../../keymap.nix
 		];
 
 # Bootloader.
@@ -49,8 +49,8 @@
 # Enable the GNOME Desktop Environment.
 	services.xserver.displayManager.gdm.enable = true;
 	services.xserver.desktopManager.gnome.enable = true;
-	services.desktopManager.cosmic.enable = true;
-	# services.displayManager.cosmic-greeter.enable = true;
+	services.displayManager.cosmic-greeter.enable = false;
+	services.desktopManager.cosmic.enable = false;
 	programs.hyprland.enable = true;
 	programs.sway = {
 		enable = true;
