@@ -91,6 +91,9 @@
     gnome.enable = true;
   };
 
+  services.displayManager.cosmic-greeter.enable = false;
+  services.desktopManager.cosmic.enable = false;
+
   services.xserver.windowManager = {
     i3.enable = false;
   };
