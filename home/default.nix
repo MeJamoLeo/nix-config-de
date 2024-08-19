@@ -94,6 +94,10 @@
 			discord
 			online-judge-tools
 			online-judge-template-generator
+			obsidian
+			spotify
+			gcc
+			cmake
 			];
 
 

@@ -10,6 +10,9 @@ in
 	wayland.windowManager.hyprland = {
 		enable = true;
 		plugins = [
+			# inputs.Hyprspace.packages.${system}.Hyprspace
+			# inputs.hy3.packages.${system}.hy3
+			# inputs.split-monitor-workspaces.packages.${system}.split-monitor-workspaces
 		];
 		settings = {
 			env = [
@@ -191,6 +194,17 @@ in
 			location = "bottom-right";
 			allow_markup = true;
 			width = 250;
+		};
+	};
+	services.hyprpaper = {
+		enable = true;
+		settings = {
+			preload = [
+				"${../wallpaper/lamp.jpg}"
+			];
+			wallpaper = [
+				",${../wallpaper/lamp.jpg}"
+			];
 		};
 	};
 }
