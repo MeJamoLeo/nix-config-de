@@ -65,6 +65,15 @@
 				action = "<CMD>SmartSwapRight<CR>";
 				options.desc = "Swap Right";
 			}
+#==============================
+# smart-splits
+#==============================
+			{
+				mode = "n";
+				key = "<leader>e";
+				action = "<CMD>Telescope file_browser<CR>";
+				options.desc = "Swap Right";
+			}
 		];
 
 		opts = {
@@ -186,6 +195,7 @@
 				extensions = {
 					fzf-native.enable = true;
 					ui-select.enable = true;
+					file-browser.enable = true;
 				};
 				keymaps = {
 					"<leader>ff" = {

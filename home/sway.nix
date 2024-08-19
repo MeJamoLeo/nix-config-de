@@ -42,7 +42,7 @@ in
 				"${mod}+f" = "exec --no-startup-id firefox";
 				"${mod}+q" = "kill";
 				"${mod}+Escape" = "exec swaylock";
-				"${mod}+Shift+Escape" = "swaymsg exit";
+				"${mod}+Shift+Escape" = "exec 'swaymsg exit'";
 				"${mod}+1" = "workspace number 1";
 				"${mod}+2" = "workspace number 2";
 				"${mod}+3" = "workspace number 3";
