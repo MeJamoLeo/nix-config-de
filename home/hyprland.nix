@@ -13,7 +13,7 @@ in
 			# inputs.Hyprspace.packages.${system}.Hyprspace
 			# inputs.hy3.packages.${system}.hy3
 			# inputs.split-monitor-workspaces.packages.${system}.split-monitor-workspaces
-			inputs.hyprland-plugins.packages.${system}.borders-plus-plus
+			# inputs.hyprland-plugins.packages.${system}.borders-plus-plus
 		];
 		settings = {
 			env = [
