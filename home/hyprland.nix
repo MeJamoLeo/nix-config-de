@@ -13,6 +13,7 @@ in
 			# inputs.Hyprspace.packages.${system}.Hyprspace
 			# inputs.hy3.packages.${system}.hy3
 			# inputs.split-monitor-workspaces.packages.${system}.split-monitor-workspaces
+			inputs.hyprland-plugins.packages.${system}.borders-plus-plus
 		];
 		settings = {
 			env = [
@@ -20,6 +21,7 @@ in
 				"BROWSER, qutebrowser"
 			];
 			"$mod" = "SUPER";
+			"$mod_a" = "ALT";
 			monitor = [
 				# "eDP-1, highres, auto, 1" #laptop
 				# "DP-3, highres, auto-left, 1" #sumsung
@@ -27,6 +29,7 @@ in
 			];
 			general = {
 				layout = "master";
+				border_size = 3;
 			};
 			master = {
 				allow_small_split = true;
@@ -74,6 +77,13 @@ in
 					"$mod CTRL, K, movewindow, u"
 					"$mod CTRL, J, movewindow, d"
 
+### move workspace
+					"$mod SHIFT CTRL, H, exec, hyprctl dispatch workspace m-1"
+					"$mod SHIFT CTRL, J, exec, hyprctl dispatch movetoworkspacesilent m-1 && hyprctl dispatch workspace m-1"
+					"$mod SHIFT CTRL, K, exec, hyprctl dispatch movetoworkspacesilent m+1 && hyprctl dispatch workspace m+1"
+					"$mod SHIFT CTRL, L, exec, hyprctl dispatch workspace m+1"
+					"$mod SHIFT CTRL, N, exec, hyprctl dispatch move focus tooutput next"
+
 # "$mod, O, TODO: Change window orientation,"
 					"$mod, G, togglefloating,"
 					"$mod, M, fullscreen, 0"
@@ -91,7 +101,7 @@ in
 					"$mod SHIFT, Escape, exit,"
 					"$mod CTRL SHIFT, Escape, exec, shutdown-script"
 
-# show keybinds list
+# show keybinds lis
 					"$mod, F1, exec, show-keybinds"
 
 # keybindings
@@ -136,6 +146,16 @@ in
 					"$mod SHIFT, 0, movetoworkspacesilent, 10"
 					"$mod CTRL, c, movetoworkspace, empty"
 
+					"$mod_a, 1, exec, hyprctl dispatch workspace 1 && $TERM"
+					"$mod_a, 2, exec, hyprctl dispatch workspace 2 && $BROWSER"
+					"$mod_a, 3, exec, hyprctl dispatch workspace 3 && vscode"
+					#"$mod_a, 4, exec, hyprctl dispatch workspace 4 && $BROWSER"
+					#"$mod_a, 5, exec, hyprctl dispatch workspace 5 && $BROWSER"
+					#"$mod_a, 6, exec, hyprctl dispatch workspace 6 && $BROWSER"
+					#"$mod_a, 7, exec, hyprctl dispatch workspace 7 && $BROWSER"
+					"$mod_a, 8, exec, hyprctl dispatch workspace 8 && zathura"
+					"$mod_a, 9, exec, hyprctl dispatch workspace 9 && spotify"
+					"$mod_a, 0, exec, hyprctl dispatch workspace 10 && discord"
 # clipboard manager
 					"$mod, V, exec, cliphist list | wofi --dmenu | cliphist decode | wl-copy"
 
