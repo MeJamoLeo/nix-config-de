@@ -99,6 +99,8 @@
 			gcc
 			cmake
 			lldb
+			zoom-us
+			vivaldi
 			];
 
 

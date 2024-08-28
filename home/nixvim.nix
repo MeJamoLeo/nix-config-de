@@ -76,6 +76,14 @@
 			}
 		];
 
+		userCommands.OpenTerminalWithCommand.command =''
+			function OpenTerminalWithCommand()
+				local dir = vim.fn.expand('%:p:h')
+				vim.cmd('cd ' .. dir)
+				vim.fn.termopen('ls', { cwd = dir })
+			end
+			'';
+
 		opts = {
 			number = true;
 			relativenumber = true;
