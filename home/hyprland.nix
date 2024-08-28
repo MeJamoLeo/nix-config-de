@@ -227,10 +227,10 @@ in
 		enable = true;
 		settings = {
 			preload = [
-				"${../wallpaper/lamp.jpg}"
+				"${../wallpaper/night.png}"
 			];
 			wallpaper = [
-				",${../wallpaper/lamp.jpg}"
+				",${../wallpaper/night.png}"
 			];
 		};
 	};
