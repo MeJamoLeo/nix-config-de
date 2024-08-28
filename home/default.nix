@@ -98,6 +98,7 @@
 			spotify
 			gcc
 			cmake
+			lldb
 			];
 
 

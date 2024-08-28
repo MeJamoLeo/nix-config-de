@@ -23,9 +23,9 @@ in
 			"$mod" = "SUPER";
 			"$mod_a" = "ALT";
 			monitor = [
-				# "eDP-1, highres, auto, 1" #laptop
+				"eDP-1, highres, auto, 1" #laptop
 				# "DP-3, highres, auto-left, 1" #sumsung
-				"DP-1, highres, auto, 1"
+				# "DP-1, highres, auto, 1"
 			];
 			general = {
 				layout = "master";

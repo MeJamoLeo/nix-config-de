@@ -221,9 +221,9 @@
 					};
 					"<leader>fb" = {
 						mode = "n";
-						action = "builtin";
+						action = "buffers";
 						options = {
-							desc = "[F]ind [B]uiltin";
+							desc = "[F]ind [B]uffers";
 						};
 					};
 					"<leader>fc" = {
