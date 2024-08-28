@@ -1,6 +1,7 @@
 { inputs, ...}:
 let
 	system = "x86_64-linux";
+	hostname = builtins.getEnv "HOSTNAME";
 in
 {
 	imports = [
@@ -22,11 +23,13 @@ in
 			];
 			"$mod" = "SUPER";
 			"$mod_a" = "ALT";
-			monitor = [
-				"eDP-1, highres, auto, 1" #laptop
-				# "DP-3, highres, auto-left, 1" #sumsung
-				# "DP-1, highres, auto, 1"
-			];
+
+			monitor = if hostname == "suika" then
+				[ "DP-1, highres, auto, 1" ]
+			 else if hostname == "budou" then
+				[ "eDP-1, highres, auto, 1" ]
+			 else [];
+
 			general = {
 				layout = "master";
 				border_size = 3;
