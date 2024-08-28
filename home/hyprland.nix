@@ -56,7 +56,7 @@ in
 				shadow_render_power = 3;
 				blur = {
 					enabled = true;
-					size = 9;
+					size = 3;
 					new_optimizations = true;
 					passes = 3;
 					ignore_opacity = true;
