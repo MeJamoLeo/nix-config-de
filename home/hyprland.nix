@@ -78,6 +78,9 @@ in
 					"$mod CTRL, J, movewindow, d"
 
 ### move workspace
+					"$mod, TAB, exec, hyprctl dispatch workspace m+1"
+					"$mod SHIFT, TAB, exec, hyprctl dispatch workspace m-1"
+
 					"$mod SHIFT CTRL, H, exec, hyprctl dispatch workspace m-1"
 					"$mod SHIFT CTRL, J, exec, hyprctl dispatch movetoworkspacesilent m-1 && hyprctl dispatch workspace m-1"
 					"$mod SHIFT CTRL, K, exec, hyprctl dispatch movetoworkspacesilent m+1 && hyprctl dispatch workspace m+1"
@@ -86,7 +89,7 @@ in
 
 # "$mod, O, TODO: Change window orientation,"
 					"$mod, G, togglefloating,"
-					"$mod, M, fullscreen, 0"
+					# "$mod, M, fullscreen, 0"
 					"$mod, Q, killactive,"
 
 ## Manage workspace and displays
@@ -182,6 +185,7 @@ in
 					"wl-paste --type text --watch cliphist store #Stores only text data"
 					"wl-paste --type image --watch cliphist store #Stores only image data"
 					"fcitx5"
+					"hypridle"
 			];
 			input = {
 				kb_options = "ctrl:swapcaps";

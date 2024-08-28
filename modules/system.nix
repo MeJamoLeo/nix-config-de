@@ -147,4 +147,9 @@
 	];
 
 	environment.variables.EDITOR = "vim";
+	environment.interactiveShellInit = ''
+	alias ojp='oj-prepare'
+	alias ojt='g++ main.cpp -Wall -Wextra -Werror && oj t'
+	alias ojs='oj s main.cpp -y'
+	'';
 }

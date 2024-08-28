@@ -51,4 +51,15 @@
 			D = "toggle_page_mode";
 		};
 	};
+
+	programs.chromium = {
+		enable = true;
+		extensions = [
+			"gighmmpiobklfepjocnamgkkbiglidom" # AdBlock
+			"nffaoalbilbmmfgbnbgppjihopabppdk" # Video Speed Chontroller
+			"dbepggeogbaibhgnhhndojpepiihcmeb" # Vimium
+			"neebplgakaahbhdphmkckjjcegoiijjo" # Keepa - Amazon Price Tracker
+			"fdpohaocaechififmbbbbbknoalclacl" # GoFullPage - Full Page Screen Capture
+		];
+	};
 }

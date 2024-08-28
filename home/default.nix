@@ -98,6 +98,8 @@
 			spotify
 			gcc
 			cmake
+			zoom-us
+			vivaldi
 			];
 
 
