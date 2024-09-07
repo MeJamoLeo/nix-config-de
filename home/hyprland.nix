@@ -48,8 +48,8 @@ in
 			};
 			decoration = {
 				rounding = 10;
-				active_opacity = 0.75;
-				inactive_opacity = 0.7;
+				active_opacity = 0.9;
+				inactive_opacity = 0.9;
 				fullscreen_opacity = 0.75;
 				drop_shadow = true;
 				shadow_range = 5;
