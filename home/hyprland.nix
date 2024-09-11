@@ -227,10 +227,10 @@ in
 		enable = true;
 		settings = {
 			preload = [
-				"${../wallpaper/night.png}"
+				"${../wallpaper/pcarmona_sydney.jpg}"
 			];
 			wallpaper = [
-				",${../wallpaper/night.png}"
+				",${../wallpaper/pcarmona_sydney.jpg}"
 			];
 		};
 	};
