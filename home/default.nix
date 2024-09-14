@@ -101,6 +101,8 @@
 			lldb
 			zoom-us
 			vivaldi
+			clisp
+			sbcl
 			];
 
 
