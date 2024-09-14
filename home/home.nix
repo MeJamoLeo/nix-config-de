@@ -60,6 +60,8 @@
 			"dbepggeogbaibhgnhhndojpepiihcmeb" # Vimium
 			"neebplgakaahbhdphmkckjjcegoiijjo" # Keepa - Amazon Price Tracker
 			"fdpohaocaechififmbbbbbknoalclacl" # GoFullPage - Full Page Screen Capture
+			"bhlhnicpbhignbdhedgjhgdocnmhomnp" # ColorZilla
+			"dhdgffkkebhmkfjojejmpbldmpobfkfo" # Tampermonkey - userscript, which is for atcoder
 		];
 	};
 }
