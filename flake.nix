@@ -17,11 +17,6 @@
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
 
-		nixos-cosmic = {
-			url = "github:lilyinstarlight/nixos-cosmic";
-			inputs.nixpkgs.follows = "nixpkgs";
-		};
-
 		hyprland = {
 			url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
 		};
@@ -51,7 +46,6 @@
 		nixpkgs,
 		home-manager,
 		nixvim,
-		nixos-cosmic,
 		hyprland,
 		...
 	}@inputs: {
@@ -72,14 +66,6 @@
 						};
 						nixpkgs.config.allowUnfree = true;
 					}
-#___________________COSMIC
-					{
-						nix.settings = {
-							substituters = [ "https://cosmic.cachix.org/" ];
-							trusted-public-keys = [ "cosmic.cachix.org-1:Dya9IyXD4xdBehWjrkPv6rtxpmMdRel02smYzA85dPE=" ];
-						};
-					}
-					nixos-cosmic.nixosModules.default
 				];
 				specialArgs = {inherit inputs;};
 			};
@@ -99,14 +85,6 @@
 						};
 						nixpkgs.config.allowUnfree = true;
 					}
-#___________________COSMIC
-					{
-						nix.settings = {
-							substituters = [ "https://cosmic.cachix.org/" ];
-							trusted-public-keys = [ "cosmic.cachix.org-1:Dya9IyXD4xdBehWjrkPv6rtxpmMdRel02smYzA85dPE=" ];
-						};
-					}
-					nixos-cosmic.nixosModules.default
 				];
 				specialArgs = {inherit inputs;};
 			};

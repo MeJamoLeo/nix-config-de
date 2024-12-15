@@ -66,9 +66,6 @@
 	services.xserver.displayManager.lightdm.enable = false;
 	services.xserver.desktopManager.xfce.enable = false;
 
-	services.displayManager.cosmic-greeter.enable = false;
-	services.desktopManager.cosmic.enable = false;
-
 	services.xserver.windowManager.i3.enable = false;
 	programs.hyprland.enable = true;
 	programs.sway.enable = true;
