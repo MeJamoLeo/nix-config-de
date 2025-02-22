@@ -16,37 +16,12 @@
 			url = "github:nix-community/nixvim";
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
-
-		hyprland = {
-			url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
-		};
-
-		hyprland-plugins = {
-			url = "github:hyprwm/hyprland-plugins";
-			inputs.hyprland.follows = "hyprland";
-		};
-
-		hy3 = {
-			url = "github:outfoxxed/hy3";
-			inputs.hyprland.follows = "hyprland";
-		};
-
-		Hyprspace = {
-			url = "github:KZDKM/Hyprspace";
-			inputs.hyprland.follows = "hyprland";
-		};
-
-		split-monitor-workspaces = {
-			url = "github:Duckonaut/split-monitor-workspaces";
-			inputs.hyprland.follows = "hyprland"; # <- make sure this line is present for the plugin to work as intended
-		};
 	};
 
 	outputs = {
 		nixpkgs,
 		home-manager,
 		nixvim,
-		hyprland,
 		...
 	}@inputs: {
 		nixosConfigurations = {
